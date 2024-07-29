@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fetchAPI(){
+            fetch("https://reqres.in/api/users/2", {method:'DELETE',
+               
+            }).
+            then(res=>{
+                console.log(res.status);
+                if(res.status==204){
+                    console.log("Deleted Successfully");
+                }
+            }).catch(err=>{
+                console.log(err);
+            })
+        }
+    </script>
+</head>
+<body onload="fetchAPI()">
+    
+</body>
+</html>
